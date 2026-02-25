@@ -14,7 +14,7 @@ if (process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON) {
 // Middleware
 app.use(cors());
 app.use(express.json());
-app.use(express.static(path.join(__dirname, '../frontend')));
+app.use(express.static(path.join(__dirname, './frontend')));
 
 // Initialize Google Cloud Text-to-Speech client
 const client = new textToSpeech.TextToSpeechClient();
@@ -72,7 +72,7 @@ app.post('/api/text-to-speech', async (req, res) => {
 
 // Serve frontend
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+  res.sendFile(path.join(__dirname, './frontend/index.html'));
 });
 
 // 404 handler
