@@ -28,7 +28,7 @@ async function sendMessage() {
 
     try {
         // ✅ FETCH FROM RAILWAY BACKEND
-        const response = await fetch(`${API_URL}/api/chat`, {
+        const response = await fetch(`${API_URL}/api/text-to-speech`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
