@@ -40,8 +40,8 @@ app.post('/api/text-to-speech', async (req, res) => {
     const request = {
       input: { text: text },
       voice: {
-        languageCode: 'en-IN', // English (India)
-        name: 'en-IN-Standard-A', // Female voice (Priya)
+        languageCode: 'en-IN', // English
+        name: 'en-IN-Neural2-A', // Female voice 
         ssmlGender: 'FEMALE',
       },
       audioConfig: {
