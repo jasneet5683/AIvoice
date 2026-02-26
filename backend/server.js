@@ -17,7 +17,9 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, './frontend')));
 
 // Initialize Google Cloud Text-to-Speech client
-const client = new textToSpeech.TextToSpeechClient();
+const client = new textToSpeech.TextToSpeechClient({
+  apiKey: process.env.GOOGLE_API_KEY
+});
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
