@@ -6,11 +6,7 @@ const cors = require('cors');
 require('dotenv').config();
 const app = express();
 // IMPORTANT: For Railway, read credentials from environment variable
-if (process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON) {
-  const credentialsPath = path.join(__dirname, '../config/serviceAccountKey.json');
-  fs.writeFileSync(credentialsPath, process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON);
-  process.env.GOOGLE_APPLICATION_CREDENTIALS = credentialsPath;
-}
+//if (process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON) {const credentialsPath = path.join(__dirname, '../config/serviceAccountKey.json');fs.writeFileSync(credentialsPath, process.env.GOOGLE_APPLICATION_CREDENTIALS_JSON); process.env.GOOGLE_APPLICATION_CREDENTIALS = credentialsPath;}
 // Middleware
 app.use(cors());
 app.use(express.json());
